@@ -4,6 +4,19 @@ using Linq;
 
 namespace DataStructSandBox.DataStructures
 {
+    public interface ICircularBuffer<T>
+    {
+        T Read();
+        
+        void Write(T value);
+
+        void Overwrite(T value);
+
+        void Clear();
+
+        void DequeueHead();
+    }
+    
     public class CircularBuffer<T>
     {
         private readonly int _capacity;
